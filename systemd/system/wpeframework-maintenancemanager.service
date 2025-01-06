@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework MaintenanceManager Initialiser
+Requires=wpeframework.service iarmbusd.service mfrmgr.service pwrmgr.service wpeframework-network.service wpeframework-authservice.service
+After=wpeframework.service iarmbusd.service mfrmgr.service pwrmgr.service wpeframework-network.service wpeframework-authservice.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.MaintenanceManager

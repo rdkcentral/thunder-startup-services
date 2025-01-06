@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework RemoteControl Initialiser
+Requires=wpeframework.service iarmbusd.service ctrlm-main.service
+After=wpeframework.service iarmbusd.service ctrlm-main.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.RemoteControl

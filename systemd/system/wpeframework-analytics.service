@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework Analytics Initialiser
+Requires=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service wpeframework-authservice.service 
+After=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service wpeframework-authservice.service 
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.Analytics

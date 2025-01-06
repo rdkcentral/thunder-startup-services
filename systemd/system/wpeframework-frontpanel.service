@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework FrontPanel Initialiser
+Requires=wpeframework.service iarmbusd.service dsmgr.service pwrmgr.service
+After=wpeframework.service iarmbusd.service dsmgr.service pwrmgr.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.FrontPanel

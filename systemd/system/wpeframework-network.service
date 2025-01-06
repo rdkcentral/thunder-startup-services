@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework Network Initialiser
+Requires=wpeframework.service iarmbusd.service wpeframework-networkmanager.service
+After=wpeframework.service iarmbusd.service wpeframework-networkmanager.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.Network

@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework USBMassStorage Initialiser
+Requires=wpeframework.service wpeframework-usbdevice.service
+After=wpeframework.service wpeframework-usbdevice.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.UsbMassStorage

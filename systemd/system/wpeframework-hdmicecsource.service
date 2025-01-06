@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework HdmiCecSource Initialiser
+Requires=wpeframework.service
+After=wpeframework.service iarmbusd.service dsmgr.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.HdmiCecSource

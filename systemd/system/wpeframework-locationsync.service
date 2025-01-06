@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework LocationSync Initialiser
+Requires=wpeframework.service
+After=wpeframework.service wpeframework-network.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator LocationSync

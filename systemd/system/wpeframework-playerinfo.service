@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework PlayerInfo Initialiser
+Requires=wpeframework.service iarmbusd.service dsmgr.service
+After=wpeframework.service iarmbusd.service dsmgr.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator PlayerInfo

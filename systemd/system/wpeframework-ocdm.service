@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework OCDM Initialiser
+Requires=wpeframework.service wpeframework-deviceprovisioning.service
+After=wpeframework.service wpeframework-deviceprovisioning.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator OCDM
