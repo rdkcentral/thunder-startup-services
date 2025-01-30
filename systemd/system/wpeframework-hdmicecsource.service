@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework HdmiCecSource Initialiser
 Requires=wpeframework.service
-After=wpeframework.service iarmbusd.service dsmgr.service
+After=wpeframework-powermanager.service dsmgr.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

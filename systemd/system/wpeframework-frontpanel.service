@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework FrontPanel Initialiser
-Requires=wpeframework.service iarmbusd.service dsmgr.service pwrmgr.service
-After=wpeframework.service iarmbusd.service dsmgr.service pwrmgr.service
+Requires=wpeframework-powermanager.service dsmgr.service
+After=wpeframework-powermanager.service dsmgr.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
