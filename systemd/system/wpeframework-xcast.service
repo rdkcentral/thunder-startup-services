@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Xcast Initialiser
-Requires=wpeframework.service iarmbusd.service pwrmgr.service
-After=wpeframework.service iarmbusd.service pwrmgr.service
+Requires=wpeframework-powermanager.service
+After=wpeframework-powermanager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
