@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Telemetry Initialiser
-Requires=wpeframework.service iarmbusd.service
-After=wpeframework.service iarmbusd.service
+Requires=wpeframework-powermanager.service
+After=wpeframework-powermanager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
