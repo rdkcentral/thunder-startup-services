@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework FirmwareUpdate Initialiser
-Requires=wpeframework.service
-After=wpeframework.service
+Requires=wpeframework-powermanager.service
+After=wpeframework-powermanager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
