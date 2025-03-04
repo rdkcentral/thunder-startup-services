@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework DisplaySettings Initialiser
-Requires=wpeframework.service iarmbusd.service dsmgr.service pwrmgr.service
-After=wpeframework.service iarmbusd.service dsmgr.service pwrmgr.service
+Requires=dsmgr.service wpeframework-powermanager.service
+After=dsmgr.service wpeframework-powermanager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
