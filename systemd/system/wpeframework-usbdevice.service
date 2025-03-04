@@ -1,8 +1,8 @@
 [Unit]
-Description=WPEFramework USBDevice Initialiser
+Description=WPEFramework UsbDevice Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.USBDevice
+ExecStart=/usr/bin/PluginActivator org.rdk.UsbDevice
