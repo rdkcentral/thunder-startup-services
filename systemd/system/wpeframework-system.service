@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework System Initialiser
-Requires=wpeframework-telemetry.service sysmgr.service mfrmgr.service
-After=wpeframework-telemetry.service sysmgr.service mfrmgr.service
+Requires=wpeframework-powermanager.service sysmgr.service mfrmgr.service
+After=wpeframework-powermanager.service sysmgr.service mfrmgr.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
