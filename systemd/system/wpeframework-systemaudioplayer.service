@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework SystemAudioPlayer Initialiser
-Requires=wpeframework.service
-After=wpeframework.service
+Requires=wpeframework-powermanager.service
+After=wpeframework-powermanager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
