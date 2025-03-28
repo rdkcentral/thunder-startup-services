@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework OCDM Initialiser
-Requires=wpeframework.service wpeframework-deviceprovisioning.service
-After=wpeframework.service wpeframework-deviceprovisioning.service
+Requires=wpeframework.service
+After=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
