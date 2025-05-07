@@ -1,0 +1,10 @@
+[Unit]
+Description=WPEFramework RDKWindowManager Initialiser
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/opt/ai2managers
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.RDKWindowManager
