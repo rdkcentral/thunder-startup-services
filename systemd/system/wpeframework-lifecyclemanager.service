@@ -1,0 +1,10 @@
+[Unit]
+Description=WPEFramework LifecycleManager Initialiser
+Requires= wpeframework.service wpeframework-runtimemanager.service
+After= wpeframework.service wpeframework-runtimemanager.service
+ConditionPathExists=/opt/ai2managers
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.LifecycleManager
