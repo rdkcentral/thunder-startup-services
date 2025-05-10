@@ -2,6 +2,7 @@
 Description=WPEFramework Xcast Initialiser
 Requires=wpeframework-powermanager.service
 After=wpeframework-powermanager.service
+ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
