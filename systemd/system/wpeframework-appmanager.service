@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework AppManager Initialiser
+Requires= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
+After= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
+ConditionPathExists=/opt/ai2managers
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.AppManager
+
