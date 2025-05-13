@@ -1,0 +1,7 @@
+#This file is used to trigger restart of the wpeframework plugins.
+#The Requires field will be filled in by the bb file.
+
+[Unit]
+Description=Target for WPEFramework-related services
+Requires=
+After=wpeframework.service
