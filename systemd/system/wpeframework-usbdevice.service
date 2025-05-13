@@ -2,6 +2,7 @@
 Description=WPEFramework UsbDevice Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
