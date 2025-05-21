@@ -3,6 +3,7 @@ Description=WPEFramework PackageManagerRDKEMS Initialiser
 Requires= wpeframework.service wpeframework-storagemanager.service
 After= wpeframework.service wpeframework-storagemanager.service
 ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot
