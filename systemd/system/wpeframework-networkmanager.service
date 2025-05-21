@@ -6,5 +6,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStartPre=/lib/rdk/nm_interface_handler.sh
+ExecStartPre=/bin/sh -c '/lib/rdk/nm_interface_handler.sh'
 ExecStart=/usr/bin/PluginActivator org.rdk.NetworkManager
