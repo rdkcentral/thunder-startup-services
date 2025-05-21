@@ -5,5 +5,4 @@ After=wpeframework.service iarmbusd.service NetworkManager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStartPre=/bin/sh -c '/lib/rdk/nm_interface_handler.sh'
 ExecStart=/usr/bin/PluginActivator org.rdk.NetworkManager
