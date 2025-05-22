@@ -8,4 +8,6 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+ExecStartPre=/usr/bin/ai2managers_prereqs.sh &
 ExecStart=/usr/bin/PluginActivator org.rdk.PackageManagerRDKEMS
+
