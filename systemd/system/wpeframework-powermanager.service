@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework PowerManager Initialiser
-Requires=wpeframework.service iarmbusd.service pwrmgr.service
-After=wpeframework.service iarmbusd.service pwrmgr.service 
+Requires=wpeframework.service iarmbusd.service
+After=wpeframework.service iarmbusd.service 
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
