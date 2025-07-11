@@ -6,4 +6,4 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator -r 200 -d 1000 OCDM
+ExecStart=/usr/bin/PluginActivator -r 200 OCDM
