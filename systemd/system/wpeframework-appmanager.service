@@ -10,4 +10,4 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStartPre=-/usr/bin/ai2managers_prereqs.sh &
 ExecStart=/usr/bin/PluginActivator org.rdk.AppManager
-
+ExecStop=/lib/rdk/deactivate_plugin.sh org.rdk.AppManager

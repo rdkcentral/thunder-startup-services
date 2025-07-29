@@ -7,4 +7,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/PluginActivator LISA
+ExecStop=/lib/rdk/deactivate_plugin.sh org.rdk.
 RemainAfterExit=yes

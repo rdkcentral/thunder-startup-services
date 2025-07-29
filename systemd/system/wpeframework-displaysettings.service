@@ -6,3 +6,4 @@ After=dsmgr.service wpeframework-powermanager.service
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.DisplaySettings
+ExecStop=/lib/rdk/deactivate_plugin.sh org.rdk.DisplaySettings

@@ -7,4 +7,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/PluginActivator org.rdk.RDKShell
+ExecStop=/lib/rdk/deactivate_plugin.sh org.rdk.RDKShell
 RemainAfterExit=yes
