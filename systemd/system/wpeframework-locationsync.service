@@ -7,4 +7,4 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator LocationSync
-ExecStop=/lib/rdk/deactivate_plugin.sh org.rdk.
+ExecStop=/lib/rdk/deactivate_plugin.sh LocationSync
