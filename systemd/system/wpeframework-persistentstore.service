@@ -8,3 +8,4 @@ RequiresMountsFor=/opt/secure
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.PersistentStore
+ExecStop=/lib/rdk/deactivate_plugin.sh org.rdk.PersistentStore
