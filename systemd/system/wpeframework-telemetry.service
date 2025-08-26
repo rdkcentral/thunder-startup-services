@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Telemetry Initialiser
-Requires=wpeframework-system.service wpeframework-powermanager.service
-After=wpeframework-system.service wpeframework-powermanager.service
+Requires=wpeframework-system.service wpeframework-powermanager.service wpeframework-usersettings.service
+After=wpeframework-system.service wpeframework-powermanager.service wpeframework-usersettings.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
