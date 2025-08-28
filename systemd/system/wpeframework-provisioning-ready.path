@@ -1,0 +1,11 @@
+[Unit]
+Description=Wait for Thunder PROVISIONING precondition
+Documentation=Thunder framework provisioning precondition fulfilled
+After=wpeframework-deviceprovisioning.service
+
+[Path]
+PathExists=/tmp/thunder-provisioning-precondition
+MakeDirectory=false
+
+[Install]
+WantedBy=multi-user.target

@@ -1,9 +1,13 @@
 [Unit]
-Description=WPEFramework OCDM Initialiser
+Description=WPEFramework OCDM Plugin
 Requires=wpeframework.service
 After=wpeframework.service
 ConditionPathExists=/tmp/wpeframeworkstarted
+
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator -r 200 OCDM
+ExecStart=/usr/bin/PluginActivator org.rdk.OCDM
+
+[Install]
+WantedBy=wpeframework-provisioning-ready.path
