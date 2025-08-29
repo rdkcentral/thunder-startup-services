@@ -1,0 +1,5 @@
+[Unit]
+Description=Thunder Provisioning Completed
+Documentation=Indicates that Thunder PROVISIONING precondition has been fulfilled
+RefuseManualStart=yes
+RefuseManualStop=yes
