@@ -3,12 +3,11 @@ Description=WPEFramework OCDM Plugin
 Requires=wpeframework.service
 After=wpeframework.service wpeframework-provisioning-ready.target
 Requisite=wpeframework-provisioning-ready.target
-ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.OCDM
+ExecStart=/usr/bin/PluginActivator OCDM
 
 [Install]
 WantedBy=wpeframework-provisioning-ready.target
