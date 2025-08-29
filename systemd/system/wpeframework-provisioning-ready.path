@@ -5,6 +5,7 @@ After=wpeframework-deviceprovisioning.service
 
 [Path]
 PathExists=/tmp/thunder-provisioning-precondition
+Unit=wpeframework-provisioning-ready.target
 MakeDirectory=false
 
 [Install]
