@@ -8,4 +8,5 @@ ConditionPathExists=!/opt/ai2managers
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/PluginActivator LISA
+ExecStop=/lib/rdk/deactivate_plugin.sh LISA
 RemainAfterExit=yes
