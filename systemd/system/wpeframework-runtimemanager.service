@@ -1,7 +1,8 @@
 [Unit]
 Description=WPEFramework RuntimeManager Initialiser
-Requires= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
+Requires= wpeframework.service wpeframework-storagemanager.service wpeframework-ocicontainer.service
 After= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
+Wants=  wpeframework-rdkwindowmanager.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
@@ -9,4 +10,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.RuntimeManager
+
 
