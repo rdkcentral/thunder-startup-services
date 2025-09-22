@@ -11,4 +11,3 @@ RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.RuntimeManager
 
 
-
