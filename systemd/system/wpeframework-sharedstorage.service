@@ -1,8 +1,7 @@
 [Unit]
 Description=WPEFramework SharedStorage Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service
-Wants=wpeframework-cloudstore.service
-After=wpeframework.service wpeframework-persistentstore.service wpeframework-cloudstore.service
+After=wpeframework.service wpeframework-persistentstore.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
