@@ -1,0 +1,13 @@
+[Unit]
+Description=WPEFramework DownloadManager Initialiser
+Requires= wpeframework.service wpeframework-storagemanager.service
+After= wpeframework.service wpeframework-storagemanager.service
+ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=-/usr/bin/ai2managers_prereqs.sh &
+ExecStart=/usr/bin/PluginActivator org.rdk.DownloadManager
+
