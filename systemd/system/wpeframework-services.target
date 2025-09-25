@@ -5,3 +5,7 @@
 Description=Target for WPEFramework-related services
 Requires=
 After=wpeframework.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'if [ -f /opt/restartEPG.sh ]; then /bin/sh /opt/restartEPG.sh; fi'
