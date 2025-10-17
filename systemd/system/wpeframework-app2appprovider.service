@@ -1,0 +1,10 @@
+[Unit]
+Description=WPEFramework App2AppProvider Initialiser
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.App2AppProvider

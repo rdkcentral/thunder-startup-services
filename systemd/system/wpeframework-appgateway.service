@@ -1,0 +1,10 @@
+[Unit]
+Description=WPEFramework AppGateway Initialiser
+Requires=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service wpeframework-app2appprovider.service
+After=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service wpeframework-app2appprovider.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.AppGateway
