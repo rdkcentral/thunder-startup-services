@@ -3,6 +3,7 @@ Description=WPEFramework AppNotifications Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
 ConditionPathExists=/tmp/wpeframeworkstarted
+ConditionPathExists=/etc/appgatewayenabled
 
 [Service]
 Type=oneshot
