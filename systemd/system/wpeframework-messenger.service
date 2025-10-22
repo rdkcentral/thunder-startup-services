@@ -7,3 +7,4 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator Messenger
+ExecStop=/lib/rdk/deactivate_plugin.sh Messenger

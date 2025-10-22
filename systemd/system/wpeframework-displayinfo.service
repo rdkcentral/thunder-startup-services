@@ -7,3 +7,4 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator DisplayInfo
+ExecStop=/lib/rdk/deactivate_plugin.sh DisplayInfo
