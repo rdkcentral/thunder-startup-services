@@ -3,7 +3,7 @@ Description=WPEFramework AppGateway Initialiser
 Requires=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service wpeframework-app2appprovider.service
 After=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service wpeframework-app2appprovider.service
 ConditionPathExists=/tmp/wpeframeworkstarted
-ConditionPathExists=/etc/appgatewayenabled
+ConditionPathExists=/opt/appgatewayenabled
 
 [Service]
 Type=oneshot

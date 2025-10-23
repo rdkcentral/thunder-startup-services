@@ -3,7 +3,7 @@ Description=WPEFramework App2AppProvider Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
 ConditionPathExists=/tmp/wpeframeworkstarted
-ConditionPathExists=/etc/appgatewayenabled
+ConditionPathExists=/opt/appgatewayenabled
 
 [Service]
 Type=oneshot
