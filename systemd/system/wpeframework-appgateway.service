@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework AppGateway Initialiser
-Requires=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service wpeframework-app2appprovider.service
-After=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service wpeframework-app2appprovider.service
+Requires=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service
+After=wpeframework.service wpeframework-launchdelegate.service wpeframework-appnotifications.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 ConditionPathExists=/opt/appgatewayenabled
 
