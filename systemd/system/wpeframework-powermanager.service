@@ -7,5 +7,6 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.PowerManager
+ExecStop=/bin/touch /tmp/pwrmgr_restarted
 [Install]
 WantedBy=multi-user.target
