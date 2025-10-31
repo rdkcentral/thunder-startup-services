@@ -1,0 +1,12 @@
+[Unit]
+Description=WPEFramework PreinstallManager Initialiser
+Requires= wpeframework.service wpeframework-packagemanager.service
+After= wpeframework.service wpeframework-packagemanager.service
+ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=-/usr/bin/ai2managers_prereqs.sh &
+ExecStart=/usr/bin/PluginActivator org.rdk.PreinstallManager
