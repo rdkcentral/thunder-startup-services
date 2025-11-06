@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Bluetooth Initialiser
 Requires=wpeframework-powermanager.service iarmbusd.service btmgr.service
-After=wpeframework-powermanager.service iarmbusd.service btmgr.service
+After=wpeframework-powermanager.service iarmbusd.service bluetooth.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
