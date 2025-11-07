@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Analytics Initialiser
-Requires=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service
-After=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service
+Requires=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service wpeframework-privacy.service
+After=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service wpeframework-privacy.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
