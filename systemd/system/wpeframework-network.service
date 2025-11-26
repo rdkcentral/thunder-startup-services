@@ -2,7 +2,6 @@
 Description=WPEFramework Network Initialiser
 Requires=wpeframework.service iarmbusd.service wpeframework-networkmanager.service
 After=wpeframework.service iarmbusd.service wpeframework-networkmanager.service
-ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes

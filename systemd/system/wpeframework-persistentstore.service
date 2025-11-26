@@ -2,7 +2,6 @@
 Description=WPEFramework PersistentStore Initialiser
 Requires=wpeframework-powermanager.service
 After=wpeframework-powermanager.service securemount.service
-ConditionPathExists=/tmp/wpeframeworkstarted
 RequiresMountsFor=/opt/secure
 [Service]
 Type=oneshot

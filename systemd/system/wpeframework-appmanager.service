@@ -3,7 +3,6 @@ Description=WPEFramework AppManager Initialiser
 Requires= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
 After= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
 ConditionPathExists=/opt/ai2managers
-ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot

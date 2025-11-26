@@ -2,7 +2,6 @@
 Description=WPEFramework FrontPanel Initialiser
 Requires=wpeframework-powermanager.service dsmgr.service
 After=wpeframework-powermanager.service dsmgr.service
-ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes

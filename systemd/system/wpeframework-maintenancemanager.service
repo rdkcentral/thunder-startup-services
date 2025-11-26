@@ -2,7 +2,6 @@
 Description=WPEFramework MaintenanceManager Initialiser
 Requires=wpeframework.service iarmbusd.service mfrmgr.service wpeframework-network.service
 After=wpeframework.service iarmbusd.service mfrmgr.service wpeframework-network.service
-ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes

@@ -3,7 +3,6 @@ Description=WPEFramework RDKWindowManager Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
 ConditionPathExists=/opt/ai2managers
-ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot

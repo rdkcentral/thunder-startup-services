@@ -2,7 +2,6 @@
 Description=WPEFramework LocationSync Initialiser
 Requires=wpeframework.service
 After=wpeframework.service wpeframework-network.service
-ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes

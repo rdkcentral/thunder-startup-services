@@ -2,7 +2,6 @@
 Description=WPEFramework PowerManager Initialiser
 Requires=wpeframework.service iarmbusd.service
 After=wpeframework.service iarmbusd.service 
-ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes

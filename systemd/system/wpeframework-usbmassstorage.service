@@ -2,7 +2,6 @@
 Description=WPEFramework USBMassStorage Initialiser
 Requires=wpeframework.service wpeframework-usbdevice.service
 After=wpeframework.service wpeframework-usbdevice.service
-ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes

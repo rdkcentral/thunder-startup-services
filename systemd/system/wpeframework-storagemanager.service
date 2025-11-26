@@ -3,7 +3,6 @@ Description=WPEFramework StorageManager Initialiser
 Requires= wpeframework.service
 After= wpeframework.service
 ConditionPathExists=/opt/ai2managers
-ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot
