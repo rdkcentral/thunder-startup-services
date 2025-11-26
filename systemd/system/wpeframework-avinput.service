@@ -5,6 +5,7 @@ After=wpeframework.service dsmgr.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Environment="LD_DEBUG=libs,symbols"
+Environment="LD_DEBUG_OUTPUT=/opt/ld_debug.txt"
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.AVInput
