@@ -1,7 +1,8 @@
 [Unit]
 Description=WPEFramework PowerManager Initialiser
 Requires=wpeframework.service iarmbusd.service
-After=wpeframework.service iarmbusd.service 
+After=wpeframework.service iarmbusd.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

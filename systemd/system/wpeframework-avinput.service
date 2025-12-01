@@ -2,6 +2,7 @@
 Description=WPEFramework AVInput Initialiser
 Requires=wpeframework.service dsmgr.service
 After=wpeframework.service dsmgr.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

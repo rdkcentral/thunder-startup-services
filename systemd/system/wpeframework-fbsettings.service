@@ -2,6 +2,7 @@
 Description=WPEFramework FbSetting Initialiser
 Requires=wpeframework.service wpeframework-appgateway.service
 After=wpeframework.service wpeframework-appgateway.service
+PartOf=wpeframework.service
 ConditionPathExists=/opt/appgatewayenabled
 
 [Service]

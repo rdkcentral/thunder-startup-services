@@ -2,6 +2,7 @@
 Description=WPEFramework PersistentStore Initialiser
 Requires=wpeframework.service
 After=wpeframework.service securemount.service
+PartOf=wpeframework.service
 RequiresMountsFor=/opt/secure
 [Service]
 Type=oneshot

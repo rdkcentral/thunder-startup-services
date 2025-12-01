@@ -2,6 +2,7 @@
 Description=WPEFramework DisplaySettings Initialiser
 Requires=wpeframework.service dsmgr.service wpeframework-powermanager.service
 After=wpeframework.service dsmgr.service wpeframework-powermanager.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

@@ -3,6 +3,7 @@ Description=WPEFramework PreinstallManager Initialiser
 Requires= wpeframework.service wpeframework-packagemanager.service
 After= wpeframework.service wpeframework-packagemanager.service
 ConditionPathExists=/opt/ai2managers
+PartOf=wpeframework.service
 
 [Service]
 Type=oneshot

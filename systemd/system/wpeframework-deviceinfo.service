@@ -2,6 +2,7 @@
 Description=WPEFramework DeviceInfo Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service
 After=wpeframework.service iarmbusd.service dsmgr.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

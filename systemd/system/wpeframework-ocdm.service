@@ -2,6 +2,7 @@
 Description=WPEFramework OCDM Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

@@ -2,6 +2,7 @@
 Description=WPEFramework SharedStorage Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service
 After=wpeframework.service wpeframework-persistentstore.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

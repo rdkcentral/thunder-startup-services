@@ -2,6 +2,7 @@
 Description=WPEFramework NetworkManager Initialiser
 Requires=wpeframework.service iarmbusd.service NetworkManager.service
 After=wpeframework.service iarmbusd.service NetworkManager.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

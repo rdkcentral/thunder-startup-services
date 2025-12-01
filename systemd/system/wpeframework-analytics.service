@@ -2,6 +2,7 @@
 Description=WPEFramework Analytics Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service
 After=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
