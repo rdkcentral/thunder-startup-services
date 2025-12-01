@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework PlayerInfo Initialiser
-Requires=wpeframework-powermanager.service iarmbusd.service dsmgr.service
-After=wpeframework-powermanager.service iarmbusd.service dsmgr.service
+Requires=wpeframework.service wpeframework-powermanager.service iarmbusd.service dsmgr.service
+After=wpeframework.service wpeframework-powermanager.service iarmbusd.service dsmgr.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

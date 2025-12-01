@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework RemoteControl Initialiser
-Requires=wpeframework-powermanager.service iarmbusd.service ctrlm-main.service
-After=wpeframework-powermanager.service iarmbusd.service ctrlm-main.service
+Requires=wpeframework.service wpeframework-powermanager.service iarmbusd.service ctrlm-main.service
+After=wpeframework.service wpeframework-powermanager.service iarmbusd.service ctrlm-main.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

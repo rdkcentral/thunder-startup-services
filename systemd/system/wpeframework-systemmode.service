@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework SystemMode Initialiser
-Requires=wpeframework-powermanager.service
-After=wpeframework-powermanager.service
+Requires=wpeframework.service wpeframework-powermanager.service
+After=wpeframework.service wpeframework-powermanager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
