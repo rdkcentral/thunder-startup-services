@@ -2,7 +2,7 @@
 Description=WPEFramework HdmiCecSource Initialiser
 Requires=wpeframework.service
 After=wpeframework-powermanager.service dsmgr.service
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

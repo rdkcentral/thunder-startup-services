@@ -2,7 +2,7 @@
 Description=WPEFramework RDKShell Plugin Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service
 After=wpeframework.service iarmbusd.service dsmgr.service
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 ConditionPathExists=!/opt/ai2managers
 
 [Service]

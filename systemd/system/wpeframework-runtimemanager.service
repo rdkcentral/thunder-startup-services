@@ -3,7 +3,7 @@ Description=WPEFramework RuntimeManager Initialiser
 Requires= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
 After= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
 ConditionPathExists=/opt/ai2managers
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 
 [Service]
 Type=oneshot

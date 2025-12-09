@@ -2,7 +2,7 @@
 Description=WPEFramework HdcpProfile Initialiser
 Requires=wpeframework-powermanager.service dsmgr.service
 After=wpeframework-powermanager.service dsmgr.service
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

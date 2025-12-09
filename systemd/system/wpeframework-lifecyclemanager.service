@@ -3,7 +3,7 @@ Description=WPEFramework LifecycleManager Initialiser
 Requires= wpeframework.service wpeframework-runtimemanager.service
 After= wpeframework.service wpeframework-runtimemanager.service
 ConditionPathExists=/opt/ai2managers
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 
 [Service]
 Type=oneshot

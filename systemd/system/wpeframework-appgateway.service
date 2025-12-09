@@ -2,7 +2,7 @@
 Description=WPEFramework AppGateway Initialiser
 Requires=wpeframework.service wpeframework-appnotifications.service
 After=wpeframework.service wpeframework-appnotifications.service
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 ConditionPathExists=/opt/appgatewayenabled
 
 [Service]

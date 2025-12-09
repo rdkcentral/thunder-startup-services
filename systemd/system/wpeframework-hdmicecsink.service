@@ -2,7 +2,7 @@
 Description=WPEFramework HdmiCecSink Initialiser
 Requires=dsmgr.service wpeframework-powermanager.service
 After=dsmgr.service wpeframework-powermanager.service
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

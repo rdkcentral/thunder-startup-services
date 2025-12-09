@@ -2,7 +2,7 @@
 Description=WPEFramework UserSettings Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service
 After=wpeframework.service wpeframework-persistentstore.service
-ConditionPathExists=/tmp/wpeframeworkstarted
+PartOf=wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
