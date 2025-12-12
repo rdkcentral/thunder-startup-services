@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Xcast Initialiser
 Requires=wpeframework-powermanager.service
-After=wpeframework-powermanager.service
+After=wpeframework-powermanager.service wpeframework-deviceinfo.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
