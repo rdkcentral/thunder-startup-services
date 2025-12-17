@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework AppGateway Initialiser
+Requires=wpeframework.service wpeframework-appnotifications.service
+After=wpeframework.service wpeframework-appnotifications.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+ConditionPathExists=/opt/appgatewayenabled
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.AppGateway
