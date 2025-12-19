@@ -8,4 +8,4 @@ ConditionPathExists=/opt/appgatewayenabled
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.appgatewaycommon.service
+ExecStart=/usr/bin/PluginActivator org.rdk.AppGatewayCommon
