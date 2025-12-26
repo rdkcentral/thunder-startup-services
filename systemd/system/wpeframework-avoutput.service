@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework AVOutput Initialiser
-Requires=wpeframework.service dsmgr.service
-After=wpeframework.service dsmgr.service
+Requires=wpeframework.service dsmgr.service wpeframework-avinput.service
+After=wpeframework.service dsmgr.service wpeframework-avinput.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
