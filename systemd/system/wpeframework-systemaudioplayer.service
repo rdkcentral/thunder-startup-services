@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework SystemAudioPlayer Initialiser
-Requires=wpeframework-powermanager.service dsmgr.service
-After=wpeframework-powermanager.service dsmgr.service
+Requires=wpeframework-powermanager.service dsmgr.service wpeframework-avinput.service
+After=wpeframework-powermanager.service dsmgr.service wpeframework-avinput.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
