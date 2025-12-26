@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework System Initialiser
-Requires=wpeframework-powermanager.service sysmgr.service mfrmgr.service dsmgr.service
-After=wpeframework-powermanager.service sysmgr.service mfrmgr.service dsmgr.service
+Requires=wpeframework-powermanager.service sysmgr.service mfrmgr.service dsmgr.service wpeframework-avinput.service
+After=wpeframework-powermanager.service sysmgr.service mfrmgr.service dsmgr.service wpeframework-avinput.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
