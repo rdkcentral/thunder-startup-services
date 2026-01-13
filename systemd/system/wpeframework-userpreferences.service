@@ -1,5 +1,5 @@
 [Unit]
-Description=WPEFramework User Prefecences Initialiser
+Description=WPEFramework User Preferences Initialiser
 Requires=wpeframework.service wpeframework-usersettings.service
 After=wpeframework.service wpeframework-usersettings.service
 ConditionPathExists=/tmp/wpeframeworkstarted
