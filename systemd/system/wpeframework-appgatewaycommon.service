@@ -1,5 +1,5 @@
 [Unit]
-Description=WPEFramework FbSetting Initialiser
+Description=WPEFramework AppGatewayCommon Initialiser
 Requires=wpeframework.service wpeframework-appgateway.service
 After=wpeframework.service wpeframework-appgateway.service
 ConditionPathExists=/tmp/wpeframeworkstarted
@@ -8,4 +8,4 @@ ConditionPathExists=/opt/appgatewayenabled
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.FbSettings
+ExecStart=/usr/bin/PluginActivator org.rdk.AppGatewayCommon
