@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework MotionDetection Initialiser
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.MotionDetection
