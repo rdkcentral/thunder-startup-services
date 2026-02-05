@@ -1,3 +1,5 @@
+# WPEFramework AppManager Initialiser
+# Activates the AppManager plugin after framework initialization
 [Unit]
 Description=WPEFramework AppManager Initialiser
 Requires= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
@@ -8,5 +10,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.AppManager
 
+[Install]
+WantedBy=multi-user.target

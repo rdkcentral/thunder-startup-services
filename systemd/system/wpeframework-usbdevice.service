@@ -1,3 +1,5 @@
+# WPEFramework UsbDevice Initialiser
+# Activates the UsbDevice plugin after framework initialization
 [Unit]
 Description=WPEFramework UsbDevice Initialiser
 Requires=wpeframework.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.UsbDevice
+
+[Install]
+WantedBy=multi-user.target

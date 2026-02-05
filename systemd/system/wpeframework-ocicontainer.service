@@ -1,3 +1,5 @@
+# WPEFramework Plugin Initialiser
+# Activates the Plugin plugin after framework initialization
 [Unit]
 Description=WPEFramework OCIContainer Plugin Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service
@@ -8,3 +10,9 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 Type=oneshot
 ExecStart=/usr/bin/PluginActivator org.rdk.OCIContainer
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

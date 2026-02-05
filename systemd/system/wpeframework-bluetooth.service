@@ -1,9 +1,17 @@
+# WPEFramework Bluetooth Initialiser
+# Activates the Bluetooth plugin after framework initialization
 [Unit]
 Description=WPEFramework Bluetooth Initialiser
-Requires=wpeframework.service iarmbusd.service bluetooth.service
+Requires=wpeframework.service iarmbusd.service btmgr.service
 After=wpeframework.service iarmbusd.service btmgr.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.Bluetooth
+
+[Install]
+WantedBy=multi-user.target

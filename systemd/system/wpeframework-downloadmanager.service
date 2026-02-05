@@ -1,3 +1,5 @@
+# WPEFramework DownloadManager Initialiser
+# Activates the DownloadManager plugin after framework initialization
 [Unit]
 Description=WPEFramework DownloadManager Initialiser
 Requires= wpeframework.service wpeframework-storagemanager.service
@@ -8,5 +10,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.DownloadManager
 
+[Install]
+WantedBy=multi-user.target

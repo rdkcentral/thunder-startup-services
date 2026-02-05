@@ -1,3 +1,5 @@
+# WPEFramework PreinstallManager Initialiser
+# Activates the PreinstallManager plugin after framework initialization
 [Unit]
 Description=WPEFramework PreinstallManager Initialiser
 Requires= wpeframework.service wpeframework-packagemanager.service
@@ -8,4 +10,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.PreinstallManager
+
+[Install]
+WantedBy=multi-user.target

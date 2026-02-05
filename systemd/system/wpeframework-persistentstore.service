@@ -1,3 +1,5 @@
+# WPEFramework PersistentStore Initialiser
+# Activates the PersistentStore plugin after framework initialization
 [Unit]
 Description=WPEFramework PersistentStore Initialiser
 Requires=wpeframework.service
@@ -7,4 +9,10 @@ RequiresMountsFor=/opt/secure
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.PersistentStore
+
+[Install]
+WantedBy=multi-user.target

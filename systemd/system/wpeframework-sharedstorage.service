@@ -1,3 +1,5 @@
+# WPEFramework SharedStorage Initialiser
+# Activates the SharedStorage plugin after framework initialization
 [Unit]
 Description=WPEFramework SharedStorage Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.SharedStorage
+
+[Install]
+WantedBy=multi-user.target

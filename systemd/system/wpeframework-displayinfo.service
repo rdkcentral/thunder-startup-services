@@ -1,3 +1,5 @@
+# WPEFramework DisplayInfo Initialiser
+# Activates the DisplayInfo plugin after framework initialization
 [Unit]
 Description=WPEFramework DisplayInfo Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator DisplayInfo
+
+[Install]
+WantedBy=multi-user.target

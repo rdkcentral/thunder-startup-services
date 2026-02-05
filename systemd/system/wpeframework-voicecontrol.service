@@ -1,3 +1,5 @@
+# WPEFramework VoiceControl Initialiser
+# Activates the VoiceControl plugin after framework initialization
 [Unit]
 Description=WPEFramework VoiceControl Initialiser
 Requires=wpeframework.service iarmbusd.service ctrlm-main.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.VoiceControl
+
+[Install]
+WantedBy=multi-user.target
