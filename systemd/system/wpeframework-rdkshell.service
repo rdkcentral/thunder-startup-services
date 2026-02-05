@@ -1,5 +1,5 @@
-# WPEFramework Plugin Initialiser
-# Activates the Plugin plugin after framework initialization
+# WPEFramework RDKShell Initialiser
+# Activates the RDKShell plugin after framework initialization
 [Unit]
 Description=WPEFramework RDKShell Plugin Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service

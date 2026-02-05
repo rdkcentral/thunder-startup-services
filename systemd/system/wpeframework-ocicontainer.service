@@ -1,5 +1,5 @@
-# WPEFramework Plugin Initialiser
-# Activates the Plugin plugin after framework initialization
+# WPEFramework OCIContainer Initialiser
+# Activates the OCIContainer plugin after framework initialization
 [Unit]
 Description=WPEFramework OCIContainer Plugin Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service

@@ -1,5 +1,5 @@
-# WPEFramework Plugin Initialiser
-# Activates the Plugin plugin after framework initialization
+# WPEFramework LISA Initialiser
+# Activates the LISA plugin after framework initialization
 [Unit]
 Description=WPEFramework DAC LISA Plugin Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service
