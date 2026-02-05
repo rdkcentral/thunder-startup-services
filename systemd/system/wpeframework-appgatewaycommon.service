@@ -1,3 +1,5 @@
+# WPEFramework AppGatewayCommon Initialiser
+# Activates the AppGatewayCommon plugin after framework initialization
 [Unit]
 Description=WPEFramework AppGatewayCommon Initialiser
 Requires=wpeframework.service wpeframework-appgateway.service
@@ -8,4 +10,10 @@ ConditionPathExists=/opt/appgatewayenabled
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.AppGatewayCommon
+
+[Install]
+WantedBy=multi-user.target

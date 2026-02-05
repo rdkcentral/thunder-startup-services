@@ -1,3 +1,5 @@
+# WPEFramework OCDM Initialiser
+# Activates the OCDM plugin after framework initialization
 [Unit]
 Description=WPEFramework OCDM Initialiser
 Requires=wpeframework.service
@@ -6,4 +8,11 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
+# -r 200: Retry activation up to 200 times before failing (for DRM module initialization)
 ExecStart=/usr/bin/PluginActivator -r 200 OCDM
+
+[Install]
+WantedBy=multi-user.target

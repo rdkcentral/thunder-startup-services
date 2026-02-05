@@ -1,3 +1,5 @@
+# WPEFramework Xcast Initialiser
+# Activates the Xcast plugin after framework initialization
 [Unit]
 Description=WPEFramework Xcast Initialiser
 Requires=wpeframework-powermanager.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.Xcast
+
+[Install]
+WantedBy=multi-user.target

@@ -1,3 +1,5 @@
+# WPEFramework Analytics Initialiser
+# Activates the Analytics plugin after framework initialization
 [Unit]
 Description=WPEFramework Analytics Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service wpeframework-system.service wpeframework-deviceinfo.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.Analytics
+
+[Install]
+WantedBy=multi-user.target

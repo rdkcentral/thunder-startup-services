@@ -1,3 +1,5 @@
+# WPEFramework USBMassStorage Initialiser
+# Activates the USBMassStorage plugin after framework initialization
 [Unit]
 Description=WPEFramework USBMassStorage Initialiser
 Requires=wpeframework.service wpeframework-usbdevice.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.UsbMassStorage
+
+[Install]
+WantedBy=multi-user.target

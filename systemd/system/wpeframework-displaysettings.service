@@ -1,8 +1,17 @@
+# WPEFramework DisplaySettings Initialiser
+# Activates the DisplaySettings plugin after framework initialization
 [Unit]
 Description=WPEFramework DisplaySettings Initialiser
-Requires=dsmgr.service wpeframework-powermanager.service
-After=dsmgr.service wpeframework-powermanager.service
+Requires=wpeframework.service dsmgr.service wpeframework-powermanager.service
+After=wpeframework.service dsmgr.service wpeframework-powermanager.service
+ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.DisplaySettings
+
+[Install]
+WantedBy=multi-user.target

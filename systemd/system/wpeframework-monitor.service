@@ -1,3 +1,5 @@
+# WPEFramework Monitor Initialiser
+# Activates the Monitor plugin after framework initialization
 [Unit]
 Description=WPEFramework Monitor Initialiser
 Requires=wpeframework.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator Monitor
+
+[Install]
+WantedBy=multi-user.target

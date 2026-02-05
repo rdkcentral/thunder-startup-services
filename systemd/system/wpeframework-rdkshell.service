@@ -1,3 +1,5 @@
+# WPEFramework RDKShell Initialiser
+# Activates the RDKShell plugin after framework initialization
 [Unit]
 Description=WPEFramework RDKShell Plugin Initialiser
 Requires=wpeframework.service iarmbusd.service dsmgr.service
@@ -9,3 +11,9 @@ ConditionPathExists=!/opt/ai2managers
 Type=oneshot
 ExecStart=/usr/bin/PluginActivator org.rdk.RDKShell
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

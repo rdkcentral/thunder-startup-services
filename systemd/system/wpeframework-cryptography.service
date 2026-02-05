@@ -1,3 +1,5 @@
+# WPEFramework Cryptography Initialiser
+# Activates the Cryptography plugin after framework initialization
 [Unit]
 Description=WPEFramework Cryptography Initialiser
 Requires=wpeframework.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.Cryptography
+
+[Install]
+WantedBy=multi-user.target

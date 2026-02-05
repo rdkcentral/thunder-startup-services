@@ -1,3 +1,5 @@
+# WPEFramework Wifi Initialiser
+# Activates the Wifi plugin after framework initialization
 [Unit]
 Description=WPEFramework Wifi Initialiser
 Requires=wpeframework.service iarmbusd.service wpeframework-networkmanager.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.Wifi
+
+[Install]
+WantedBy=multi-user.target

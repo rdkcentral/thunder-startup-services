@@ -1,3 +1,5 @@
+# WPEFramework HdcpProfile Initialiser
+# Activates the HdcpProfile plugin after framework initialization
 [Unit]
 Description=WPEFramework HdcpProfile Initialiser
 Requires=wpeframework-powermanager.service dsmgr.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.HdcpProfile
+
+[Install]
+WantedBy=multi-user.target

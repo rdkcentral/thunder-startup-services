@@ -1,3 +1,5 @@
+# WPEFramework UserSettings Initialiser
+# Activates the UserSettings plugin after framework initialization
 [Unit]
 Description=WPEFramework UserSettings Initialiser
 Requires=wpeframework.service wpeframework-persistentstore.service
@@ -6,4 +8,10 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+PrivateTmp=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.UserSettings
+
+[Install]
+WantedBy=multi-user.target
