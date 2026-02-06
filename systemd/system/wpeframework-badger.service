@@ -1,0 +1,12 @@
+[Unit]
+Description=WPEFramework Badger Initialiser
+Requires=wpeframework.service wpeframework-launchdelegate.service wpeframework-ottservices.service wpeframework-appgateway.service
+After=wpeframework.service wpeframework-launchdelegate.service wpeframework-ottservices.service wpeframework-appgateway.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+ConditionPathExists=/opt/badgerenabled
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.Badger
+
