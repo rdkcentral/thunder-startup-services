@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework FbPrivacy Initialiser
+Requires=wpeframework.service wpeframework-appgateway.service wpeframework-privacy.service
+After=wpeframework.service wpeframework-appgateway.service wpeframework-privacy.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.FbPrivacy
+

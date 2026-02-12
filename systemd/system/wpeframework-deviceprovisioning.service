@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework DeviceProvisioning Initialiser
+Requires=wpeframework.service wpeframework-authservice.service iarmbusd.service wpeframework-powermanager.service wpeframework-networkmanager.service lighttpd.service
+After=wpeframework.service wpeframework-authservice.service iarmbusd.service wpeframework-powermanager.service wpeframework-networkmanager.service lighttpd.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator com.comcast.DeviceProvisioning

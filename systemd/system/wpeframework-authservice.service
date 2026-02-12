@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework AuthService Initialiser
+Requires=wpeframework.service wpeframework-network.service iarmbusd.service
+After=wpeframework.service wpeframework-network.service iarmbusd.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.AuthService

@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework WifiMetrics Initialiser
+Requires=wpeframework.service wpeframework-powermanager.service
+After=wpeframework.service wpeframework-powermanager.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.WifiMetrics

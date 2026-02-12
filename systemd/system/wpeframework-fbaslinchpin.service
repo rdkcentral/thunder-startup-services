@@ -1,5 +1,5 @@
 [Unit]
-Description=WPEFramework AppGatewayCommon Initialiser
+Description=WPEFramework FbAsLinchPin Initialiser
 Requires=wpeframework.service wpeframework-appgateway.service
 After=wpeframework.service wpeframework-appgateway.service
 ConditionPathExists=/tmp/wpeframeworkstarted
@@ -7,4 +7,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.AppGatewayCommon
+ExecStart=/usr/bin/PluginActivator org.rdk.FbAsLinchPin
+
