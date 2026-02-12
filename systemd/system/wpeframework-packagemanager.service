@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework PackageManagerRDKEMS Initialiser
-Requires= wpeframework.service wpeframework-storagemanager.service
-After= wpeframework.service wpeframework-storagemanager.service
+Requires= wpeframework.service wpeframework-appstoragemanager.service
+After= wpeframework.service wpeframework-appstoragemanager.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
