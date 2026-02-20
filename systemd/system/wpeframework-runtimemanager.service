@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework RuntimeManager Initialiser
-Requires= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
-After= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
+Requires= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service wpeframework-telemetrymetrics.service
+After= wpeframework.service wpeframework-storagemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service wpeframework-telemetrymetrics.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 

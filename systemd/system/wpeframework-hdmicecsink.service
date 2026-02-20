@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework HdmiCecSink Initialiser
-Requires=dsmgr.service wpeframework-powermanager.service
-After=dsmgr.service wpeframework-powermanager.service
+Requires=dsmgr.service wpeframework-powermanager.service wpeframework-usersettings.service
+After=dsmgr.service wpeframework-powermanager.service wpeframework-usersettings.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
