@@ -6,7 +6,7 @@ When writing review comments based on custom instructions located in .github/ins
 
 ## Examples
 
-    Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#1-add-proper-service-description 
+    Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#1-add-proper-service-description
     Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/instructions/Dependency_management.instructions.md#dependency-management-guidelines
     
 
@@ -109,7 +109,7 @@ RemainAfterExit=yes
 
 ***Use with `Type=oneshot` only***
 
-- `RemainAfterExit= `is only valid with `Type=oneshot`
+- `RemainAfterExit=` is only valid with `Type=oneshot`
 - Not applicable to `Type=notify` or `Type=simple` (they have running processes)
 - Attempting to use with other types is an error
 
@@ -178,7 +178,7 @@ Enable configuration updates without stopping the service to avoid disrupting ac
 
 ***Service type restrictions***
 
-- Use with` Type=notify` - long-running daemons with readiness notification.
+- Use with `Type=notify` - long-running daemons with readiness notification.
 - Use with `Type=simple` - long-running daemons without notification.
 - Do not use with `Type=oneshot` - no running process to signal after task completes.
 

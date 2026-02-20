@@ -18,7 +18,7 @@ The following provides details on Restart directive. More information on what re
 ## Enabling of automatic restarts as per need
 
 - It controls whether services can automatically restart after it crashes.
-- Defaultly services are not restarted automatically, it stays dead after a crash(`Restart=no`)
+- By default, services are not restarted automatically; they stay dead after a crash (`Restart=no`).
 
 **Requirements:**
 
