@@ -2,12 +2,12 @@
 
 When writing review comments based on custom instructions located in .github/instructions/**.instructions.md, include a direct GitHub link to the exact violated guideline in the respective instruction file. Use the following format:
 
-    Refer: https://github.com/thunder-startup-services/blob/develop/.github/copilot-instructions.md#guideline-section-name
+    Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#guideline-section-name
 
 ## Examples
 
     Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#1-add-proper-service-description 
-    Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/instructions/Dependency_management.instructions.md#dependency-management-guidenlines
+    Refer: https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/instructions/Dependency_management.instructions.md#dependency-management-guidelines
     
 
 # Instruction Summary
@@ -254,7 +254,7 @@ ExecStart=/usr/bin/myapp --config /etc/myapp.conf
 
 ***For RDK Components***
 
-- Do not use drop-in file  files, add content to unit directly.
+- Do not use drop-in files, add content to unit directly.
 
 ***For OSS Components***
 
