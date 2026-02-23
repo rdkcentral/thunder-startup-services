@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework PersistentStore Initialiser
-Requires=wpeframework-powermanager.service
-After=wpeframework-powermanager.service
+Requires=pwrmgr.service wpeframework.service
+After=pwrmgr.service wpeframework.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
