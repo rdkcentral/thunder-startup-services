@@ -1,13 +1,12 @@
 [Unit]
 Description=WPEFramework DeviceSettings Initialiser
-Requires=wpeframework-powermanager.service dsmgr.service
-After=wpeframework-powermanager.service dsmgr.service
+Requires=wpeframework.service dsmgr.service
+After=wpeframework.service dsmgr.service
 ConditionPathExists=/tmp/wpeframeworkstarted
-
 [Service]
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.DeviceSettings
-
+ExecStop=/bin/touch /tmp/pwrmgr_restarted
 [Install]
 WantedBy=multi-user.target
