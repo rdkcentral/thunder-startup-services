@@ -20,7 +20,7 @@ wpeframework.service starts
        wpeframework-services.target activates
                     │
                     ▼
-       Individual plugin services start (ConditionPathExists=/tmp/wpeframeworkstarted)
+       Individual plugin services start (often gated by conditions such as ConditionPathExists=/tmp/wpeframeworkstarted)
                     │
                     ▼
        /usr/bin/PluginActivator <plugin-callsign>
@@ -31,9 +31,10 @@ wpeframework.service starts
 | File | Role |
 |---|---|
 | `wpeframework-services.path` | Inotify watcher on `/tmp/wpeframeworkstarted`; triggers the target when the file appears |
-| `wpeframework-services.target` | Ordering anchor that all plugin services pull from |
+| `wpeframework-services.target` | Ordering anchor that plugin services pull from; its concrete dependency list (`Requires=`/`Wants=`) is populated by the BitBake build system at image build time |
 | Individual `*.service` files | One-shot services that call `PluginActivator` for a specific plugin callsign |
 
+The set of plugin `*.service` units that are tied into `wpeframework-services.target` is not hardcoded in this repository. Instead, the BitBake `.bb` recipes used to build the image generate and attach the appropriate `Requires=`/`Wants=` dependencies to `wpeframework-services.target` at build time.
 Each plugin service is `Type=oneshot` with `RemainAfterExit=yes`, so systemd tracks it as active after the activator exits successfully.
 
 ## Services
@@ -93,12 +94,12 @@ These services are only enabled when `/opt/ai2managers` exists on the device.
 | `wpeframework-appmanager.service` | `org.rdk.AppManager` |
 | `wpeframework-lifecyclemanager.service` | `org.rdk.LifecycleManager` |
 | `wpeframework-runtimemanager.service` | `org.rdk.RuntimeManager` |
-| `wpeframework-packagemanager.service` | `org.rdk.PackageManager` |
+| `wpeframework-packagemanager.service` | `org.rdk.PackageManagerRDKEMS` |
 | `wpeframework-downloadmanager.service` | `org.rdk.DownloadManager` |
 | `wpeframework-preinstallmanager.service` | `org.rdk.PreinstallManager` |
-| `wpeframework-windowmanager.service` | `org.rdk.WindowManager` |
+
 | `wpeframework-lisa.service` | `LISA` |
-| `wpeframework-ocicontainer.service` | `OCIContainer` |
+| `wpeframework-ocicontainer.service` | `org.rdk.OCIContainer` |
 
 ### App Gateway
 
@@ -107,7 +108,7 @@ These services are only enabled when `/opt/appgatewayenabled` exists on the devi
 | Service | Plugin Callsign |
 |---|---|
 | `wpeframework-appgateway.service` | `org.rdk.AppGateway` |
-| `wpeframework-appgatewaycommon.service` | — |
+| `wpeframework-appgatewaycommon.service` | `org.rdk.AppGatewayCommon` |
 | `wpeframework-appnotifications.service` | `org.rdk.AppNotifications` |
 
 ### Connectivity / Peripheral
@@ -115,7 +116,7 @@ These services are only enabled when `/opt/appgatewayenabled` exists on the devi
 | Service | Plugin Callsign |
 |---|---|
 | `wpeframework-bluetooth.service` | `org.rdk.Bluetooth` |
-| `wpeframework-remotecontrol.service` | `RemoteControl` |
+| `wpeframework-remotecontrol.service` | `org.rdk.RemoteControl` |
 | `wpeframework-usbdevice.service` | `org.rdk.UsbDevice` |
 | `wpeframework-usbmassstorage.service` | `org.rdk.UsbMassStorage` |
 | `wpeframework-xcast.service` | `org.rdk.Xcast` |
@@ -172,7 +173,7 @@ Several services gate activation on the presence of a flag file:
 
 | Flag path | Effect |
 |---|---|
-| `/tmp/wpeframeworkstarted` | Required by **all** plugin services — set by WPEFramework on startup |
+| `/tmp/wpeframeworkstarted` | Commonly required by Thunder plugin services that should start only after WPEFramework is running (set by WPEFramework on startup; some units may omit this condition) |
 | `/opt/ai2managers` | Enables AI 2.0 App Lifecycle services; disables legacy equivalents (RDKShell, LISA) |
 | `/opt/appgatewayenabled` | Enables the AppGateway plugin stack |
 
