@@ -6,7 +6,7 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.PowerManager
+ExecStart=/bin/echo "pluginactivator disabled for powermanager"
 ExecStop=/bin/touch /tmp/pwrmgr_restarted
 [Install]
 WantedBy=multi-user.target
