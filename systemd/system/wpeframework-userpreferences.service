@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework User Preferences Initialiser
+Requires=wpeframework.service wpeframework-usersettings.service
+After=wpeframework.service wpeframework-usersettings.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.UserPreferences
