@@ -1,5 +1,5 @@
 [Unit]
-Description=WPE DeviceDiagnostics
+Description=WPEFramework DeviceDiagnostics Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
 ConditionPathExists=/tmp/wpeframeworkstarted
