@@ -50,7 +50,6 @@ Each plugin service is `Type=oneshot` with `RemainAfterExit=yes`, so systemd tra
 | `wpeframework-powermanager.service` | `org.rdk.PowerManager` |
 | `wpeframework-systemmode.service` | `org.rdk.SystemMode` |
 | `wpeframework-deviceinfo.service` | `DeviceInfo` |
-| `wpeframework-userpreferences.service` | `org.rdk.UserPreferences` |
 
 ### Display / AV
 
@@ -67,6 +66,7 @@ Each plugin service is `Type=oneshot` with `RemainAfterExit=yes`, so systemd tra
 | `wpeframework-rdkshell.service` | `org.rdk.RDKShell` |
 | `wpeframework-rdkwindowmanager.service` | `org.rdk.RDKWindowManager` |
 | `wpeframework-frontpanel.service` | `org.rdk.FrontPanel` |
+| `wpeframework-userpreferences.service` | `org.rdk.UserPreferences` |
 
 ### Networking
 
