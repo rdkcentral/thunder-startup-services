@@ -153,7 +153,7 @@ These services are only enabled when `/opt/appgatewayenabled` exists on the devi
 | `wpeframework-firmwareupdate.service` | `org.rdk.FirmwareUpdate` |
 | `wpeframework-usersettings.service` | `org.rdk.UserSettings` |
 
-### Webkit Browser
+### WebKit Browser
 
 | Service | Plugin Callsign |
 |---|---|
