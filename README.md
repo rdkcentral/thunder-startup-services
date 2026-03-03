@@ -66,6 +66,7 @@ Each plugin service is `Type=oneshot` with `RemainAfterExit=yes`, so systemd tra
 | `wpeframework-rdkshell.service` | `org.rdk.RDKShell` |
 | `wpeframework-rdkwindowmanager.service` | `org.rdk.RDKWindowManager` |
 | `wpeframework-frontpanel.service` | `org.rdk.FrontPanel` |
+| `wpeframework-userpreferences.service` | `org.rdk.UserPreferences` |
 
 ### Networking
 
@@ -151,6 +152,12 @@ These services are only enabled when `/opt/appgatewayenabled` exists on the devi
 | `wpeframework-maintenancemanager.service` | `org.rdk.MaintenanceManager` |
 | `wpeframework-firmwareupdate.service` | `org.rdk.FirmwareUpdate` |
 | `wpeframework-usersettings.service` | `org.rdk.UserSettings` |
+
+### WebKit Browser
+
+| Service | Plugin Callsign |
+|---|---|
+| `wpeframework-motiondetection.service` | `org.rdk.MotionDetection` |
 
 ## Repository Structure
 
