@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework RDKAMService Initialiser
+Wants=wpeframework.service
+After=wpeframework.service wpeframework-packagemanager.service wpeframework-appmanager.service
+ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.RDKAMService
