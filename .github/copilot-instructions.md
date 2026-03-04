@@ -290,23 +290,3 @@ ExecStartPre= <Add my per device change>
 TimeoutStartSec=30
 TimeoutStopSec=10
 ```
-
-## 9. Boot Integration Requirement
-
-- Link services to targets like `multi-user.target` for auto-start at boot.
-- It is essential because services won't start automatically without `[Install]` section
-- It is required to ensure that proper target linkage happens at boot phase
-
-**Requirements:**
-
-***Must include `[Install]` section***
-
-- Add `WantedBy=multi-user.target` for systemd services to ensure auto-start at boot.
-- It enables services to start automatically during bootup.
-- It can be used for standalone services(not a dependency).
-
-**Example:**
-```ini
-[Install]
-WantedBy=multi-user.target
-```
