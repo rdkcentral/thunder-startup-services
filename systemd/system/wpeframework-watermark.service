@@ -1,0 +1,8 @@
+[Unit]
+Description=WPEFramework Watermark Initialiser
+After=wpeframework.service securemount.service
+RequiresMountsFor=/opt/secure
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.Watermark

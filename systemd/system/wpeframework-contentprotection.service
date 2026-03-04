@@ -1,0 +1,7 @@
+[Unit]
+Description=WPEFramework ContentProtection Initialiser
+After=wpeframework.service wpeframework-secmanager.service wpeframework-watermark.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.ContentProtection

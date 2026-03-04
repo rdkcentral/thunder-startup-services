@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework LostAndFound Initialiser
+Requires=wpeframework.service wpeframework-networkmanager.service wpeframework-authservice.service
+After=wpeframework.service wpeframework-networkmanager.service wpeframework-authservice.service wpa_supplicant.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.LostAndFound
+[Install]
+WantedBy=sky.service
