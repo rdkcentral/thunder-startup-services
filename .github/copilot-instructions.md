@@ -19,7 +19,7 @@ When writing review comments based on custom instructions located in .github/ins
   6. [Avoid usage of custom script](https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#6-avoid-usage-of-custom-script)
   7. [Usage of Drop-in files](https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#7-usage-of-drop-in-files)
   8. [Set Timeouts and Limits Appropriately](https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#8-set-timeouts-and-limits-appropriately)
-  9. [Boot Integration Requirement](https://github.com/rdkcentral/thunder-startup-services/blob/develop/.github/copilot-instructions.md#9-boot-integration-requirement)
+
 
 ## 1. Add proper service description
 
@@ -218,7 +218,7 @@ ExecReload=/bin/kill -HUP $MAINPID  #No process is running to receive the signal
 - Use direct commands in `ExecStart=` instead of scripts
 - Avoid shell script wrappers for start/stop logic
 - Do not use `PIDFile=` unless service forks non-standardly
-- it allows systemd to automatically track the main process
+- It allows systemd to automatically track the main process
 
 **Incorrect example:**
 ```ini
