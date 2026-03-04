@@ -1,5 +1,5 @@
 [Unit]
-Description=WPEFramework StorageManager Initialiser
+Description=WPEFramework AppStorageManager Initialiser
 Requires= wpeframework.service
 After= wpeframework.service
 ConditionPathExists=/opt/ai2managers
@@ -8,5 +8,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.StorageManager
+ExecStart=/usr/bin/PluginActivator org.rdk.AppStorageManager
 
