@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework LifecycleManager Initialiser
-Requires= wpeframework.service wpeframework-runtimemanager.service
-After= wpeframework.service wpeframework-runtimemanager.service
+Requires= wpeframework.service wpeframework-runtimemanager.service wpeframework-rdkwindowmanager.service wpeframework-telemetrymetrics.service
+After= wpeframework.service wpeframework-runtimemanager.service wpeframework-rdkwindowmanager.service wpeframework-telemetrymetrics.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
