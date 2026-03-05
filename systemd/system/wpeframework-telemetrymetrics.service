@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework TelemetryMetrics Initialiser
-Requires= wpeframework.service
-After= wpeframework.service
+Requires= wpeframework.service wpeframework-system.service
+After= wpeframework.service wpeframework-system.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
