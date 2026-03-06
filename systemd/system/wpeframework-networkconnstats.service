@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework NetworkConnectionStats Initialiser
+Requires=wpeframework-networkmanager.service
+After=wpeframework-networkmanager.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.NetworkConnectionStats
