@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework Account Initialiser
-Requires=wpeframework.service
-After=wpeframework.service
+Requires=wpeframework.service wpeframework-persistentstore.service
+After=wpeframework.service wpeframework-persistentstore.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
