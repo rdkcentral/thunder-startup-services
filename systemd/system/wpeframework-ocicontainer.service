@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework OCIContainer Plugin Initialiser
-Requires=wpeframework.service iarmbusd.service dsmgr.service
-After=wpeframework.service iarmbusd.service dsmgr.service
+Requires=wpeframework.service iarmbusd.service dsmgr.service dobby.service
+After=wpeframework.service iarmbusd.service dsmgr.service dobby.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
