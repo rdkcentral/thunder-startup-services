@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework FbAdvertising Initialiser
+Requires=wpeframework.service wpeframework-appgateway.service wpeframework-privacy.service wpeframework-persistentstore.service
+After=wpeframework.service wpeframework-appgateway.service wpeframework-privacy.service wpeframework-persistentstore.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.FbAdvertising
+

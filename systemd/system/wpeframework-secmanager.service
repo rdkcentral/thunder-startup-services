@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework SecManager Initialiser
+Requires=wpeframework.service iarmbusd.service wpeframework-powermanager.service wpeframework-authservice.service
+After=wpeframework.service iarmbusd.service wpeframework-powermanager.service wpeframework-authservice.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.SecManager
