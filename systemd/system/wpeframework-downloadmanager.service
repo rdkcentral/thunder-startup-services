@@ -1,7 +1,8 @@
 [Unit]
 Description=WPEFramework DownloadManager Initialiser
-Requires= wpeframework.service wpeframework-appstoragemanager.service
-After= wpeframework.service wpeframework-appstoragemanager.service
+Requires= wpeframework.service
+Wants= wpeframework-appmanager.service
+After= wpeframework.service wpeframework-appmanager.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 

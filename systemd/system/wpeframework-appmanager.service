@@ -1,6 +1,7 @@
 [Unit]
 Description=WPEFramework AppManager Initialiser
-Requires= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
+Requires= wpeframework.service wpeframework-persistentstore.service wpeframework-packagemanager.service
+Wants= wpeframework-lifecyclemanager.service
 After= wpeframework.service wpeframework-lifecyclemanager.service wpeframework-persistentstore.service wpeframework-packagemanager.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
