@@ -1,7 +1,8 @@
 [Unit]
 Description=WPEFramework StorageManager Initialiser
 Requires= wpeframework.service
-After= wpeframework.service
+Wants= wpeframework-rdkwindowmanager.service
+After= wpeframework.service wpeframework-rdkwindowmanager.service
 ConditionPathExists=/opt/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
