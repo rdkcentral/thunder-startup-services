@@ -8,6 +8,6 @@ ConditionPathExists=/opt/appgatewayenabled
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStartPre=/bin/sh -c 'if [ -f /etc/appgatewayversion.txt ]; then cat /etc/appgatewayversion.txt > /opt/logs/appgatewayversion.txt; fi'
-ExecStartPre=/bin/sh -c 'if [ -f /etc/appgatewaycpcversion.txt ]; then cat /etc/appgatewaycpcversion.txt >> /opt/logs/appgatewayversion.txt; fi'
+ExecStartPre=/bin/sh -c 'if [ -f /etc/appgatewayversion.txt ]; then cat /etc/appgatewayversion.txt > /opt/logs/version.txt; fi'
+ExecStartPre=/bin/sh -c 'if [ -f /etc/appgatewaycpcversion.txt ]; then cat /etc/appgatewaycpcversion.txt >> /opt/logs/version.txt; fi'
 ExecStart=/usr/bin/PluginActivator org.rdk.AppGateway
