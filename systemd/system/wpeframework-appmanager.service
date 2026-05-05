@@ -8,5 +8,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+ExecStartPre=/bin/sh -c 'if [ -f /etc/appgatewayversion.txt ]; then cat /etc/appmanagersversion.txt >> /opt/logs/version.txt; fi'
 ExecStart=/usr/bin/PluginActivator org.rdk.AppManager
-
