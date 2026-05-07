@@ -1,0 +1,13 @@
+[Unit]
+Description=WPE FrameRate
+Requires=wpeframework.service iarmbusd.service dsmgr.service
+After=wpeframework.service iarmbusd.service dsmgr.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.FrameRate
+
+[Install]
+WantedBy=sky.service
