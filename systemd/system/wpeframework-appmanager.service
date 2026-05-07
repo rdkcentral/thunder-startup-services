@@ -8,6 +8,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStartPre=-/usr/bin/pop_appinfra_version.sh
 ExecStart=/usr/bin/PluginActivator org.rdk.AppManager
 
