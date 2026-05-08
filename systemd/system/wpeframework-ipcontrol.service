@@ -1,0 +1,11 @@
+[Unit]
+Description=WPEFramework IPControl Initialiser
+Requires=wpeframework.service netsrvmgr.service mdns.service wpeframework-voicecontrol.service wpeframework-system.service wpeframework-network.service wpeframework-deviceinfo.service
+After=wpeframework.service netsrvmgr.service mdns.service sky-epg.service wpeframework-voicecontrol.service wpeframework-system.service wpeframework-network.service wpeframework-deviceinfo.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPost=-/lib/rdk/iptables_ipcontrol 1
+ExecStopPost=-/lib/rdk/iptables_ipcontrol 0
+ExecStart=/usr/bin/PluginActivator org.rdk.IPControl

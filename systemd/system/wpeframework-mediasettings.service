@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework MediaSettings Initialiser
+Requires=wpeframework.service mediarite.service
+After=wpeframework.service mediarite.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.MediaSettings
