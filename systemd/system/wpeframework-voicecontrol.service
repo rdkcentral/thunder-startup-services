@@ -1,8 +1,8 @@
 [Unit]
 Description=WPEFramework VoiceControl Initialiser
 Wants=ctrlm-main.service
-Requires=wpeframework.service iarmbusd.service
-After=wpeframework.service iarmbusd.service ctrlm-main.service
+Requires=wpeframework-powermanager.service iarmbusd.service
+After=wpeframework-powermanager.service iarmbusd.service ctrlm-main.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
