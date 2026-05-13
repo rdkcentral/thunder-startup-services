@@ -1,6 +1,7 @@
 [Unit]
 Description=WPEFramework RemoteControl Initialiser
-Requires=wpeframework.service iarmbusd.service ctrlm-main.service
+Wants=ctrlm-main.service
+Requires=wpeframework.service iarmbusd.service
 After=wpeframework.service iarmbusd.service ctrlm-main.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
