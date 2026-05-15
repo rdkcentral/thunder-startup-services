@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework NetworkManager Initialiser
-Requires=wpeframework.service iarmbusd.service NetworkManager.service
-After=wpeframework.service iarmbusd.service NetworkManager.service
+Requires=wpeframework.service mfrmgr.service NetworkManager.service
+After=wpeframework.service mfrmgr.service NetworkManager.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
