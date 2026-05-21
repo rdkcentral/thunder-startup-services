@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework TextToSpeech Initialiser
-Requires=wpeframework.service
-After=wpeframework.service
+Requires=wpeframework.service wpeframework-system.service
+After=wpeframework.service wpeframework-system.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
