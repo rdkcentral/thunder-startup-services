@@ -3,7 +3,6 @@ Description=WPEFramework AppActions Initialiser
 Requires=wpeframework.service wpeframework-appgatewaycommon.service
 After=wpeframework.service wpeframework-appgatewaycommon.service
 ConditionPathExists=/tmp/wpeframeworkstarted
-ConditionPathExists=/opt/appgatewayenabled
 
 [Service]
 Type=oneshot
