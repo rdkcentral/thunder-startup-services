@@ -95,7 +95,7 @@ These services are only enabled when `/opt/ai2managers` exists on the device.
 | `wpeframework-appmanager.service` | `org.rdk.AppManager` |
 | `wpeframework-lifecyclemanager.service` | `org.rdk.LifecycleManager` |
 | `wpeframework-runtimemanager.service` | `org.rdk.RuntimeManager` |
-| `wpeframework-packagemanager.service` | `org.rdk.PackageManagerRDKEMS` |
+| `wpeframework-packagemanager.service` | `org.rdk.AppPackageManager` |
 | `wpeframework-downloadmanager.service` | `org.rdk.DownloadManager` |
 | `wpeframework-preinstallmanager.service` | `org.rdk.PreinstallManager` |
 

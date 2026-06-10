@@ -1,5 +1,5 @@
 [Unit]
-Description=WPEFramework PackageManagerRDKEMS Initialiser
+Description=WPEFramework AppPackageManager Initialiser
 Requires= wpeframework.service wpeframework-appstoragemanager.service
 After= wpeframework.service wpeframework-appstoragemanager.service
 ConditionPathExists=/opt/ai2managers
@@ -8,5 +8,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.PackageManagerRDKEMS
+ExecStart=/usr/bin/PluginActivator org.rdk.AppPackageManager
 
