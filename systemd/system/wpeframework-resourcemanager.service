@@ -1,0 +1,13 @@
+[Unit]
+Description=WPEFramework ResourceManager Initialiser
+Requires=wpeframework.service
+Wants=wpeframework-texttospeech.service
+After=wpeframework.service wpeframework-texttospeech.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+ExecStart=/usr/bin/PluginActivator org.rdk.ResourceManager
