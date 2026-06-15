@@ -2,6 +2,7 @@
 Description=WPEFramework DeviceSettings Initialiser
 Requires=wpeframework.service iarmbusd.service wpeframework-powermanager.service
 After=lighttpd.service iarmbusd.service sysmgr.service wpeframework-powermanager.service wpeframework.service
+ConditionPathExists=/tmp/startdevicesettingsplugin
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
