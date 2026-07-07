@@ -1,9 +1,9 @@
 [Unit]
 Description=WPEFramework DeviceSettings Initialiser
 # Must start after all services that dsmgr depended on
-Requires=wpeframework.service iarmbusd.service wpeframework-powermanager.service
+Requires=wpeframework.service iarmbusd.service wpeframework-powermanager.service dsmgr.service
 After=lighttpd.service iarmbusd.service sysmgr.service wpeframework-powermanager.service wpeframework.service
-After=hdmiservice.service
+After=hdmiservice.service dsmgr.service
 ConditionPathExists=/tmp/startdevicesettingsplugin
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
