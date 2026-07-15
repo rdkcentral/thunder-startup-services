@@ -2,6 +2,7 @@
 Description=WPEFramework AudioOutput Initialiser
 Requires=dsmgr.service wpeframework.service
 After=dsmgr.service wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
