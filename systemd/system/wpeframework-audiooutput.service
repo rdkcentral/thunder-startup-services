@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework AudioOutput Initialiser
-Requires=dsmgr.service
-After=dsmgr.service
+Requires=dsmgr.service wpeframework.service
+After=dsmgr.service wpeframework.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
