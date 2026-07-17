@@ -3,7 +3,7 @@ Description=WPEFramework DownloadManager Initialiser
 Requires= wpeframework.service
 Wants= wpeframework-appmanager.service
 After= wpeframework.service wpeframework-appmanager.service
-ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/etc/rdkappmanagers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
