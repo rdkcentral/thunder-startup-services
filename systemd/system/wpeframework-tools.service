@@ -1,0 +1,12 @@
+[Unit]
+Description=WPEFramework Tools External Access Manager
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+TimeoutStartSec=30
+TimeoutStopSec=10
+ExecStart=/usr/bin/PluginActivator org.rdk.Tools
