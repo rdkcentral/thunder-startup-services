@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework AVInput Initialiser
-Requires=wpeframework.service dsmgr.service wpeframework-devicesettings.service
-After=wpeframework.service dsmgr.service wpeframework-devicesettings.service
+Requires=wpeframework.service wpeframework-devicesettings.service
+After=wpeframework.service wpeframework-devicesettings.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
