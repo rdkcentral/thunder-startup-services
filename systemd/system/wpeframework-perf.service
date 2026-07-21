@@ -1,13 +1,16 @@
 [Unit]
-Description=Perf tracing for WPEFramework
+Description=Performance tracing and profiling for WPEFramework process
 DefaultDependencies=no
 After=wpeframework.service
+Requires=wpeframework.service
 ConditionPathExists=/usr/bin/perf.sh
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/bin/sh /usr/bin/perf.sh
+ExecStart=/usr/bin/perf.sh
+TimeoutStartSec=30
+TimeoutStopSec=10
 
 [Install]
 WantedBy=wpeframework.service
