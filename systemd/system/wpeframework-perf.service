@@ -1,16 +1,20 @@
 [Unit]
-Description=Performance tracing and profiling for WPEFramework process
+Description=perf DWARF capture of WPEFramework ResourceMonitor at startup
 DefaultDependencies=no
-After=wpeframework.service
-Requires=wpeframework.service
-ConditionPathExists=/usr/bin/perf.sh
+After=sysinit.target local-fs.target
+Before=wpeframework.service
+ConditionPathExists=/opt/perf.sh
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/perf.sh
-TimeoutStartSec=30
-TimeoutStopSec=10
+# tune the capture window / sampling here:
+Environment=DURATION=240 FREQ=99 STACKSZ=65528 OUTDIR=/opt/logs
+Environment=PERF=/opt/perf/packages-split/lib32-perf/usr/bin/perf
+Environment=PERF_LIB=/opt/perf/packages-split/lib32-perf/usr/lib
+# run the watcher in the background so it does not block boot; it attaches the
+# instant WPEFramework appears and records the startup window.
+ExecStart=/bin/sh -c '/opt/perf.sh >/opt/logs/perf_startup_capture.log 2>&1 &'
 
 [Install]
-WantedBy=wpeframework.service
+WantedBy=sysinit.target
