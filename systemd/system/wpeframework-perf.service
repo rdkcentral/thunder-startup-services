@@ -1,6 +1,7 @@
 [Unit]
 Description=perf DWARF capture of WPEFramework ResourceMonitor at startup
 DefaultDependencies=no
+After=sysinit.target local-fs.target
 Before=wpeframework.service
 ConditionPathExists=/opt/perf.sh
 
@@ -16,4 +17,4 @@ Environment=PERF_LIB=/opt/perf/packages-split/lib32-perf/usr/lib
 ExecStart=/bin/sh -c '/opt/perf.sh >/opt/logs/perf_startup_capture.log 2>&1 &'
 
 [Install]
-WantedBy=wpeframework.service
+WantedBy=sysinit.target
