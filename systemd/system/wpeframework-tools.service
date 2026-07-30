@@ -1,5 +1,5 @@
 [Unit]
-Description=WPEFramework Tools External Access Manager
+Description=WPEFramework Tools Initializer
 Requires=wpeframework.service
 After=wpeframework.service
 ConditionPathExists=/tmp/wpeframeworkstarted
