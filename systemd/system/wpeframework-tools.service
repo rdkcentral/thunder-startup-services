@@ -1,0 +1,10 @@
+[Unit]
+Description=WPEFramework Tools Initializer
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.Tools
