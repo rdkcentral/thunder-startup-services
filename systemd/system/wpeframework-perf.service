@@ -3,7 +3,7 @@ Description=perf DWARF capture of WPEFramework ResourceMonitor at startup
 DefaultDependencies=no
 After=sysinit.target local-fs.target
 Before=wpeframework.service
-ConditionPathExists=/opt/perf.sh
+ConditionPathExists=/usr/bin/perf.sh
 
 [Service]
 Type=oneshot
@@ -14,7 +14,7 @@ Environment=PERF=/opt/perf/packages-split/lib32-perf/usr/bin/perf
 Environment=PERF_LIB=/opt/perf/packages-split/lib32-perf/usr/lib
 # run the watcher in the background so it does not block boot; it attaches the
 # instant WPEFramework appears and records the startup window.
-ExecStart=/bin/sh -c '/opt/perf.sh >/opt/logs/perf_startup_capture.log 2>&1 &'
+ExecStart=/bin/sh -c '/usr/bin/perf.sh >/opt/logs/perf_startup_capture.log 2>&1 &'
 
 [Install]
 WantedBy=sysinit.target
