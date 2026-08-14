@@ -10,8 +10,8 @@ Type=oneshot
 RemainAfterExit=yes
 # tune the capture window / sampling here:
 Environment=DURATION=240 FREQ=99 STACKSZ=65528 OUTDIR=/opt/logs
-Environment=PERF=/opt/perf/packages-split/lib32-perf/usr/bin/perf
-Environment=PERF_LIB=/opt/perf/packages-split/lib32-perf/usr/lib
+Environment=PERF=/opt/perf/perf/usr/bin/perf
+Environment=PERF_LIB=/opt/perf/perf/usr/lib
 # run the watcher in the background so it does not block boot; it attaches the
 # instant WPEFramework appears and records the startup window.
 ExecStart=/bin/sh -c '/usr/bin/perf.sh >/opt/logs/perf_startup_capture.log 2>&1 &'
