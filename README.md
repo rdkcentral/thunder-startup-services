@@ -104,8 +104,6 @@ These services are only enabled when `/opt/ai2managers` exists on the device.
 
 ### App Gateway
 
-These services are only enabled when `/opt/appgatewayenabled` exists on the device.
-
 | Service | Plugin Callsign |
 |---|---|
 | `wpeframework-appgateway.service` | `org.rdk.AppGateway` |
@@ -182,7 +180,6 @@ Several services gate activation on the presence of a flag file:
 |---|---|
 | `/tmp/wpeframeworkstarted` | Commonly required by Thunder plugin services that should start only after WPEFramework is running (set by WPEFramework on startup; some units may omit this condition) |
 | `/opt/ai2managers` | Enables AI 2.0 App Lifecycle services; disables legacy equivalents (RDKShell, LISA) |
-| `/opt/appgatewayenabled` | Enables the AppGateway plugin stack |
 
 ## Contributing
 
