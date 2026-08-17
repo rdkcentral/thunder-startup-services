@@ -1,6 +1,7 @@
 [Unit]
 Description=Arm ftrace for WPEFramework ResourceMonitor run-queue latency
 DefaultDependencies=no
+After=sysinit.target local-fs.target
 Before=wpeframework.service
 ConditionPathExists=/usr/bin/resource_monitor_runq_latency.sh
 
@@ -11,4 +12,4 @@ Environment=COMM=Monitor::IResou OUTDIR=/opt/logs
 ExecStart=/bin/sh /usr/bin/resource_monitor_runq_latency.sh arm-boot
 
 [Install]
-WantedBy=wpeframework.service
+WantedBy=sysinit.target
