@@ -12,5 +12,3 @@ ExecStart=/bin/sh /usr/bin/resource_monitor_runq_latency.sh arm-boot
 
 [Install]
 WantedBy=wpeframework.service
-[Install]
-WantedBy=sky.service
