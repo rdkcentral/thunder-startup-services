@@ -1,0 +1,15 @@
+# pressure sampler
+[Unit]
+Description=Pressure sampler for boot trace
+After=local-fs.target
+Before=wpeframework.service
+ConditionPathExists=/usr/bin/resource_monitor_runq_latency.sh
+
+[Service]
+Type=simple
+Environment=OUTDIR=/opt/logs
+ExecStart=/bin/sh /usr/bin/resource_monitor_runq_latency.sh sample-pressure
+Restart=always
+
+[Install]
+WantedBy=wpeframework.service
