@@ -8,7 +8,7 @@ ConditionPathExists=/usr/bin/resource_monitor_runq_latency.sh
 Type=oneshot
 RemainAfterExit=yes
 Environment=COMM=Monitor::IResou OUTDIR=/opt/logs
-ExecStart=/bin/sh /usr/bin/resource_monitor_runq_latency.sh sample-pressure
+ExecStart=/bin/sh /usr/bin/resource_monitor_runq_latency.sh capture
 
 [Install]
 WantedBy=wpeframework.service
