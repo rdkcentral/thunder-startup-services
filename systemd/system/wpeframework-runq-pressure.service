@@ -9,7 +9,6 @@ ConditionPathExists=/opt/resource_monitor_runq_latency.sh
 Type=simple
 Environment=OUTDIR=/opt/logs
 ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh capture
-Restart=always
 
 [Install]
 WantedBy=wpeframework.service
