@@ -2,13 +2,13 @@
 Description=Arm ftrace for WPEFramework ResourceMonitor run-queue latency
 DefaultDependencies=no
 Before=wpeframework.service
-ConditionPathExists=/usr/bin/resource_monitor_runq_latency.sh
+ConditionPathExists=/opt/resource_monitor_runq_latency.sh
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
 Environment=COMM=Monitor::IResou OUTDIR=/opt/logs
-ExecStart=/bin/sh /usr/bin/resource_monitor_runq_latency.sh arm-boot
+ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh arm-boot
 
 [Install]
 WantedBy=wpeframework.service
