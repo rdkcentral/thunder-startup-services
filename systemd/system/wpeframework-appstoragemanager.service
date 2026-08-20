@@ -3,7 +3,7 @@ Description=WPEFramework StorageManager Initialiser
 Requires= wpeframework.service
 Wants= wpeframework-rdkwindowmanager.service
 After= wpeframework.service wpeframework-rdkwindowmanager.service
-ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/etc/rdkappmanagers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
