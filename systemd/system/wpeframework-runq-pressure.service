@@ -6,7 +6,7 @@ Before=wpeframework.service
 ConditionPathExists=/opt/resource_monitor_runq_latency.sh
 
 [Service]
-Type=simple
+Type=oneshot
 Environment=OUTDIR=/opt/logs
 ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh capture
 
