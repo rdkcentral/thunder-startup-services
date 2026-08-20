@@ -8,7 +8,7 @@ ConditionPathExists=/opt/resource_monitor_runq_latency.sh
 [Service]
 Type=simple
 Environment=OUTDIR=/opt/logs
-ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh sample-pressure
+ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh capture
 Restart=always
 
 [Install]
