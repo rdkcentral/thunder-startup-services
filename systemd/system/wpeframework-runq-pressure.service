@@ -11,4 +11,4 @@ Environment=OUTDIR=/opt/logs
 ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh capture
 
 [Install]
-WantedBy=wpeframework.service
+WantedBy=sysinit.target
