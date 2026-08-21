@@ -7,6 +7,7 @@ ConditionPathExists=/opt/resource_monitor_runq_latency.sh
 
 [Service]
 Type=oneshot
+RemainAfterExit=yes
 Environment=OUTDIR=/opt/logs
 ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh capture
 
