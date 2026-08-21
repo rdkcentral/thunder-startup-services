@@ -1,7 +1,7 @@
 # pressure sampler
 [Unit]
 Description=Pressure sampler for boot trace
-After=local-fs.target
+After=local-fs.target wpeframework-runq-boottrace.service
 Before=wpeframework.service
 ConditionPathExists=/opt/resource_monitor_runq_latency.sh
 
