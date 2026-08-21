@@ -11,4 +11,4 @@ Environment=COMM=Monitor::IResou OUTDIR=/opt/logs
 ExecStart=/bin/sh /opt/resource_monitor_runq_latency.sh arm-boot
 
 [Install]
-WantedBy=wpeframework.service
+WantedBy=sysinit.target
