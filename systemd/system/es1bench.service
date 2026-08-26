@@ -1,0 +1,11 @@
+[Unit]
+Description=ES1Bench Client (on-demand, run after Thunder is up)
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/es1client /opt/es1.config
+StandardOutput=append:/var/log/es1bench/results.jsonl
+StandardError=journal

@@ -1,0 +1,9 @@
+[Unit]
+Description=ES1Bench Client (cold-start capture, runs before Thunder)
+Before=wpeframework.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/es1client /opt/es1.config
+StandardOutput=append:/var/log/es1bench/coldstart.jsonl
+StandardError=journal
