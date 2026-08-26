@@ -7,5 +7,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/es1client /opt/es1.config
-StandardOutput=append:/var/log/es1bench/results.jsonl
+StandardOutput=append:/opt/es1bench/log/results.jsonl
 StandardError=journal
