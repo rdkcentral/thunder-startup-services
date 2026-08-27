@@ -6,6 +6,9 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/es1client /opt/es1.config
-StandardOutput=append:/opt/es1bench/log/results.jsonl
+# Redirection done in the shell, not via StandardOutput=append: - that
+# systemd file-specifier syntax needs systemd v240+, which this device's
+# systemd predates (confirmed via "Failed to parse output specifier" in the
+# journal). A plain shell >> works on any systemd version.
+ExecStart=/bin/sh -c '/usr/bin/es1client /opt/es1.config >> /opt/es1bench/log/results.jsonl'
 StandardError=journal
