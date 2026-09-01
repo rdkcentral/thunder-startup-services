@@ -1,0 +1,11 @@
+[Unit]
+Description=WPE VictimSelector
+Requires=wpeframework.service wpeframework-appmanager.service wpeframework-runtimemanager.service
+After=wpeframework.service wpeframework-appmanager.service wpeframework-runtimemanager.service
+ConditionPathExists=/etc/rdkappmanagers
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.VictimSelector
