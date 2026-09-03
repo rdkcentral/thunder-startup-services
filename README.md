@@ -88,7 +88,7 @@ Each plugin service is `Type=oneshot` with `RemainAfterExit=yes`, so systemd tra
 
 ### App Lifecycle (AI 2.0)
 
-These services are only enabled when `/opt/ai2managers` exists on the device.
+These services are only enabled when `/etc/rdkappmanagers` exists on the device.
 
 | Service | Plugin Callsign |
 |---|---|
@@ -181,7 +181,7 @@ Several services gate activation on the presence of a flag file:
 | Flag path | Effect |
 |---|---|
 | `/tmp/wpeframeworkstarted` | Commonly required by Thunder plugin services that should start only after WPEFramework is running (set by WPEFramework on startup; some units may omit this condition) |
-| `/opt/ai2managers` | Enables AI 2.0 App Lifecycle services; disables legacy equivalents (RDKShell, LISA) |
+| `/etc/rdkappmanagers` | Enables AI 2.0 App Lifecycle services; disables legacy equivalents (RDKShell, LISA) |
 | `/opt/appgatewayenabled` | Enables the AppGateway plugin stack |
 
 ## Contributing
