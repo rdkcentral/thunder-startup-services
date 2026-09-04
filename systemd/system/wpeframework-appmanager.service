@@ -2,7 +2,7 @@
 Description=WPEFramework AppManager Initialiser
 Requires= wpeframework.service wpeframework-persistentstore.service wpeframework-packagemanager.service wpeframework-lifecyclemanager.service
 After= wpeframework.service wpeframework-preinstallmanager.service wpeframework-lifecyclemanager.service
-ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/etc/rdkappmanagers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
