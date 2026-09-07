@@ -1,7 +1,7 @@
 [Unit]
-Description=WPEFramework Xcast Initialiser
-Requires=wpeframework-powermanager.service wpeframework-system.service
-After=wpeframework-powermanager.service wpeframework-system.service
+Description=WPEFramework Xcast Initialiser 
+Requires=wpeframework-powermanager.service wpeframework-system.service wpeframework-networkmanager.service 
+After=wpeframework-powermanager.service wpeframework-system.service wpeframework-networkmanager.service 
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
