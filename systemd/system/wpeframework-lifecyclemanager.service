@@ -2,7 +2,7 @@
 Description=WPEFramework LifecycleManager Initialiser
 Requires= wpeframework.service wpeframework-runtimemanager.service wpeframework-rdkwindowmanager.service
 After= wpeframework.service wpeframework-runtimemanager.service wpeframework-rdkwindowmanager.service
-ConditionPathExists=/opt/ai2managers
+ConditionPathExists=/etc/rdkappmanagers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
