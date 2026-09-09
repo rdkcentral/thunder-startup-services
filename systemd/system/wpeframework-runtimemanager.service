@@ -2,7 +2,7 @@
 Description=WPEFramework RuntimeManager Initialiser
 Requires= wpeframework.service wpeframework-appstoragemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
 After= wpeframework.service wpeframework-appstoragemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
-ConditionPathExists=/etc/rdkappmanagers
+ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
