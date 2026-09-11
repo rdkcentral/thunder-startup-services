@@ -3,7 +3,7 @@ Description=WPEFramework TelemetryMetrics Initialiser
 Requires= wpeframework.service
 Wants= wpeframework-rdkwindowmanager.service
 After= wpeframework.service wpeframework-rdkwindowmanager.service
-ConditionPathExists=/etc/rdkappmanagers
+ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]

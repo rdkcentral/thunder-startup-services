@@ -2,7 +2,7 @@
 Description=WPEFramework AppPackageManager Initialiser
 Requires= wpeframework.service wpeframework-appstoragemanager.service
 After= wpeframework.service wpeframework-appstoragemanager.service
-ConditionPathExists=/etc/rdkappmanagers
+ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
