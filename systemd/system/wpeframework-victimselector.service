@@ -2,7 +2,7 @@
 Description=WPEFramework VictimSelector Initialiser
 Requires=wpeframework.service wpeframework-appmanager.service wpeframework-runtimemanager.service
 After=wpeframework.service wpeframework-appmanager.service wpeframework-runtimemanager.service
-ConditionPathExists=/etc/rdkappmanagers
+ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 ConditionPathExists=/opt/resource-monitor
 
