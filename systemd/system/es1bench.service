@@ -1,0 +1,11 @@
+[Unit]
+Description=ES1Bench Client (on-demand, run after Thunder is up)
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+# Redirection is done in the shell for compatibility with older systemd versions.
+ExecStart=/bin/sh -c '/usr/bin/es1client /opt/es1.config >> /opt/es1bench/log/results.jsonl'
+StandardError=journal

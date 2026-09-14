@@ -1,0 +1,9 @@
+[Unit]
+Description=ES1Bench Client (cold-start capture, runs before Thunder)
+Before=wpeframework.service
+
+[Service]
+Type=simple
+# Redirection is done in the shell for compatibility with older systemd versions.
+ExecStart=/bin/sh -c '/usr/bin/es1client /opt/es1-coldstart.config >> /opt/es1bench/log/coldstart.jsonl'
+StandardError=journal
