@@ -1,0 +1,11 @@
+[Unit]
+Description=ES1 configurable load client (on-demand)
+Requires=wpeframework.service
+Requires=wpeframework-es1benchmark.service
+After=wpeframework.service wpeframework-es1benchmark.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/JsonRpcLoadClient /opt/JsonRpcLoadClient.config >> /opt/es1bench/log/JsonRpcLoadClient.jsonl'
+StandardError=journal
