@@ -7,5 +7,5 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sh -c '/usr/bin/JsonRpcLoadClient /opt/JsonRpcLoadClient.config >> /opt/es1bench/log/JsonRpcLoadClient.jsonl'
+ExecStart=/bin/sh -c '/usr/bin/JsonRpcLoadClient /opt/JsonRpcLoadClient.config >> /opt/es1bench/log/JsonRpcLoadClient.jsonl 2>> /opt/es1bench/log/JsonRpcLoadClient.exchange.log'
 StandardError=journal
