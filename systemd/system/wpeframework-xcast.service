@@ -2,6 +2,7 @@
 Description=WPEFramework Xcast Initialiser
 Requires=wpeframework-powermanager.service wpeframework-system.service wpeframework-networkmanager.service wpeframework-appactions.service wpeframework-appmanager.service
 After=wpeframework-powermanager.service wpeframework-system.service wpeframework-networkmanager.service wpeframework-appactions.service wpeframework-appmanager.service
+ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
