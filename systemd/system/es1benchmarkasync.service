@@ -1,0 +1,12 @@
+[Unit]
+Description=ES1BenchmarkAsync Client (on-demand, run after Thunder is up)
+Requires=wpeframework.service
+Requires=wpeframework-es1benchmarkasync.service
+After=wpeframework.service wpeframework-es1benchmarkasync.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/es1asyncclient /opt/es1-async.config >> /opt/es1bench/log/async-results.jsonl'
+StandardOutput=journal
+StandardError=journal
