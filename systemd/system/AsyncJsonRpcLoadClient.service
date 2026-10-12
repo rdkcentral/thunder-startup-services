@@ -1,0 +1,13 @@
+[Unit]
+Description=ES1 asynchronous configurable load client
+Requires=wpeframework.service
+Requires=wpeframework-es1benchmarkasync.service
+After=wpeframework.service wpeframework-es1benchmarkasync.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/AsyncJsonRpcLoadClient /opt/AsyncJsonRpcLoadClient.config >> /opt/es1bench/log/AsyncJsonRpcLoadClient.jsonl 2>> /opt/es1bench/log/AsyncJsonRpcLoadClient.exchange.log'
+ExecStartPost=/bin/sh -c 'printf "AsyncJsonRpcLoadClient summary:\n"; cat /opt/es1bench/log/AsyncJsonRpcLoadClient.jsonl; printf "AsyncJsonRpcLoadClient exchange:\n"; cat /opt/es1bench/log/AsyncJsonRpcLoadClient.exchange.log'
+StandardOutput=journal
+StandardError=journal
