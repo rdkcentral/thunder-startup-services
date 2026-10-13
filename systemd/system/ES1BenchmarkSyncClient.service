@@ -1,0 +1,11 @@
+[Unit]
+Description=Shared sync benchmark client for ES1Benchmark (on-demand)
+Requires=wpeframework.service wpeframework-es1benchmark.service
+After=wpeframework.service wpeframework-es1benchmark.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/es1syncclient /opt/es1benchmark.config >> /opt/es1bench/log/es1benchmark-sync-results.jsonl'
+StandardOutput=journal
+StandardError=journal

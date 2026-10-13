@@ -1,0 +1,12 @@
+[Unit]
+Description=Shared sync load client for ES1Benchmark (on-demand)
+Requires=wpeframework.service wpeframework-es1benchmark.service
+After=wpeframework.service wpeframework-es1benchmark.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/SyncJsonRpcLoadClient /opt/ES1BenchmarkLoadClient.config >> /opt/es1bench/log/ES1BenchmarkLoadClient.jsonl 2>> /opt/es1bench/log/ES1BenchmarkLoadClient.exchange.log'
+ExecStartPost=/bin/sh -c 'printf "ES1BenchmarkLoadClient summary:\n"; cat /opt/es1bench/log/ES1BenchmarkLoadClient.jsonl; printf "ES1BenchmarkLoadClient exchange:\n"; cat /opt/es1bench/log/ES1BenchmarkLoadClient.exchange.log'
+StandardOutput=journal
+StandardError=journal
