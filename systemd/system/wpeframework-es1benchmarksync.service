@@ -1,0 +1,10 @@
+[Unit]
+Description=WPEFramework ES1BenchmarkSync Initialiser
+Requires=wpeframework.service
+After=wpeframework.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator ES1BenchmarkSync
