@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework DisplaySettings Initialiser
-Requires=wpeframework-powermanager.service wpeframework-devicesettings.service
-After=wpeframework-powermanager.service wpeframework-devicesettings.service
+Requires=wpeframework-powermanager.service wpeframework-devicesettings.service wpeframework-audiooutput.service
+After=wpeframework-powermanager.service wpeframework-devicesettings.service wpeframework-audiooutput.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
