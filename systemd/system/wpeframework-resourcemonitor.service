@@ -2,9 +2,12 @@
 Description=WPEFramework ResourceMonitor Initialiser
 Requires=wpeframework.service wpeframework-appmanager.service
 After=wpeframework.service wpeframework-appmanager.service
+ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
+TimeoutStartSec=30
+TimeoutStopSec=10
 RemainAfterExit=yes
 ExecStart=/usr/bin/PluginActivator org.rdk.ResourceMonitor
 
