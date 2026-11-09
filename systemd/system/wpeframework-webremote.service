@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework WebRemote Initialiser
+Requires=wpeframework.service wpeframework-linchpinclientproxy.service wpeframework-voicecontrol.service wpeframework-tools.service
+After=wpeframework.service wpeframework-linchpinclientproxy.service wpeframework-voicecontrol.service wpeframework-tools.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.WebRemote
