@@ -6,4 +6,4 @@ ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/PluginActivator org.rdk.Account
+ExecStart=/usr/bin/PluginActivator CalculatorProxy
