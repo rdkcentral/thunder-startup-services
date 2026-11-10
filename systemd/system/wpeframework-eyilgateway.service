@@ -1,0 +1,14 @@
+# Copyright 2026 RDK Management
+# SPDX-License-Identifier: Apache-2.0
+[Unit]
+Description=WPEFramework EyilGateway Initialiser
+Requires=wpeframework.service
+After=wpeframework.service
+Before=wpeframework-runtimemanager.service
+ConditionPathExists=/tmp/ai2managers
+ConditionPathExists=/tmp/wpeframeworkstarted
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.EyilGateway
