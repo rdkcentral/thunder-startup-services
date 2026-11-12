@@ -1,8 +1,7 @@
 [Unit]
 Description=WPEFramework RuntimeManager Initialiser
 Requires= wpeframework.service wpeframework-appstoragemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
-Wants=wpeframework-eyilgateway.service
-After= wpeframework.service wpeframework-appstoragemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service wpeframework-eyilgateway.service
+After= wpeframework.service wpeframework-appstoragemanager.service wpeframework-rdkwindowmanager.service wpeframework-ocicontainer.service
 ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 

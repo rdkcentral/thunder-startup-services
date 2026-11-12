@@ -4,8 +4,6 @@
 Description=WPEFramework EyilGateway Initialiser
 Requires=wpeframework.service
 After=wpeframework.service
-Before=wpeframework-runtimemanager.service
-ConditionPathExists=/tmp/ai2managers
 ConditionPathExists=/tmp/wpeframeworkstarted
 
 [Service]
