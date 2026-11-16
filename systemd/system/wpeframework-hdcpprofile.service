@@ -1,7 +1,7 @@
 [Unit]
 Description=WPEFramework HdcpProfile Initialiser
-Requires=wpeframework-powermanager.service dsmgr.service
-After=wpeframework-powermanager.service dsmgr.service
+Requires=wpeframework-powermanager.service wpeframework-devicesettings.service
+After=wpeframework-powermanager.service wpeframework-devicesettings.service
 ConditionPathExists=/tmp/wpeframeworkstarted
 [Service]
 Type=oneshot
