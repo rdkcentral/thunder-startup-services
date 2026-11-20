@@ -1,0 +1,9 @@
+[Unit]
+Description=WPEFramework SQoEEE Initialiser
+Requires=wpeframework.service wpeframework-system.service
+After=wpeframework.service wpeframework-system.service
+ConditionPathExists=/tmp/wpeframeworkstarted
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/PluginActivator org.rdk.Sqoeee

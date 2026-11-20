@@ -142,6 +142,7 @@ These services are only enabled when `/etc/rdkappmanagers` exists on the device.
 | `wpeframework-analytics.service` | `org.rdk.Analytics` |
 | `wpeframework-telemetry.service` | `org.rdk.Telemetry` |
 | `wpeframework-telemetrymetrics.service` | `org.rdk.TelemetryMetrics` |
+| `wpeframework-sqoeee.service` | `org.rdk.Sqoeee` |
 
 ### Maintenance
 
